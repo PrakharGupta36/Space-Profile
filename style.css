@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+* {
+  font-family: Poppins;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -14,18 +26,8 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-}
-
-h1,
-h2,
-h3,
-blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 
 canvas {
@@ -40,6 +42,7 @@ header {
   font-size: 2.5rem;
   padding: 2rem;
   margin-bottom: var(--spacing);
+  padding-left: 0;
 }
 
 section {
@@ -58,12 +61,22 @@ blockquote {
   margin-bottom: var(--spacing);
 }
 
+h1{
+  font-size: 4rem;
+}
+
+header p{
+  font-size: 1.5rem;
+}
+
 blockquote p {
   color: black;
   background-color: white;
-  font-size: 4rem;
-  display: inline;
-  line-height: 1;
+  font-size: 1.5rem;
+  width: 50%;
+  line-height: 4rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
 
 .left {

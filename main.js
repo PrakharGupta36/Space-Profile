@@ -3,6 +3,10 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+import bg from "./assets/bg.jpg";
+import imgprofile from "./assets/profile.png";
+import moonprofile from "./assets/moon.jpeg";
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
@@ -64,17 +68,17 @@ function stars() {
 
 Array(200).fill().forEach(stars);
 
-const spaceTexture = new THREE.TextureLoader().load("./assets/bg.jpg");
+const spaceTexture = new THREE.TextureLoader().load(bg);
 scene.background = spaceTexture;
 
-const profileCube = new THREE.TextureLoader().load("./assets/profile.png");
+const profileCube = new THREE.TextureLoader().load(imgprofile);
 
 const profile = new THREE.Mesh(
   new THREE.BoxGeometry(6, 6, 6),
   new THREE.MeshBasicMaterial({ map: profileCube })
 );
 
-const moonSphere = new THREE.TextureLoader().load("./assets/moon.jpeg");
+const moonSphere = new THREE.TextureLoader().load(moonprofile);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
